@@ -36,7 +36,7 @@ bot.onText(/\/datas/,function(msg){
 });
 //Interaçao 'oi'
 bot.on('message', (msg) => {
-    var Oi = "oi";
+    var Oi = "xau";
     if (msg.text.toString().toLowerCase().indexOf(Oi) === 0) {
     bot.sendMessage(msg.chat.id,'Oi ' + msg.from.first_name);
     } 
