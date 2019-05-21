@@ -14,8 +14,8 @@ bot.onText(/\/start/,function(msg){
 //contas
 bot.onText(/\/contas/,function(msg){
     var chatId = msg.chat.id;
-    var googledrive = '<b> - GoogleDrive: - \nLogin: projaerodesign@ifpi.edu.br\nSenha: AeroDesign123\n'
-    var onedrive = '<b> - OneDrive: - \nLogin: ifp.aerodesign@hotmail.com\nSenha: AeroDesign'
+    var googledrive = '<b> - GoogleDrive: - </b>\nLogin: projaerodesign@ifpi.edu.br\nSenha: AeroDesign123\n'
+    var onedrive = '<b> - OneDrive: - </b>\nLogin: ifp.aerodesign@hotmail.com\nSenha: AeroDesign'
     var mensagem = googledrive+onedrive;
     bot.sendMessage(chatId,mensagem,{parse_mode: "HTML"});
 });
