@@ -2,9 +2,11 @@ var TelegramBot = require('node-telegram-bot-api');
 var token = '892885157:AAEADekaCIVBcIP4ndw4lDZb2t2k3ua3A_s';
 var bot = new TelegramBot(token,{polling:true});
 
+var IDstart
 //Texto de strat
 bot.onText(/\/start/,function(msg){
     var chatId = msg.chat.id;
+    IDstart = msg.chat.id;
     var ola = 'Olá ' + msg.from.first_name + ', seja bem vindo ao bot da equipe Sol do equador, aqui você encontrará informações importantes da equipe!\n\n'
     var help = 'Digite /help para saber todas as minhas fucionalidades.'
     var mensagem = ola+help;
@@ -41,4 +43,5 @@ bot.on('message', (msg) => {
     bot.sendMessage(msg.chat.id,'Oi ' + msg.from.first_name);
     } 
 });
-bot.sendMessage(ms.chat.id,'Fala negada');
+
+bot.sendMessage(IDstart,'Fala negada');
