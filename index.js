@@ -40,4 +40,5 @@ bot.on('message', (msg) => {
     if (msg.text.toString().toLowerCase().indexOf(Oi) === 0) {
     bot.sendMessage(msg.chat.id,'Oi ' + msg.from.first_name);
     } 
-    });
+});
+bot.sendMessage(ms.chat.id,'Fala negada');
